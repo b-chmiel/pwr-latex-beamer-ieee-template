@@ -1,0 +1,42 @@
+\documentclass[xcolor=table]{beamer}
+
+\usepackage{pgfpages}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[style=ieee]{biblatex}
+\addbibresource[]{references.bib}
+
+\usetheme[vertical,lang=en,pagenumbers]{NewPwr}
+
+\title{Title of presentation}
+\author[author1]{John Brown}
+\institute{Faculty of Information and Communication Technology}
+
+
+%footcite [1]
+\makeatletter
+    \def\@makefnmark{\hbox{{{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark} [\@thefnmark]}}}}
+
+    \def\@makefntext#1{%
+        \def\insertfootnotetext{ #1}%
+        \def\insertfootnotemark{\@makefnmark}%
+        \usebeamertemplate***{footnote}}    
+\makeatother
+
+
+\begin{document}
+
+	\frame{\titlepage}
+
+	\begin{frame}{Agenda}
+		\begin{enumerate}
+			\item Item 1
+		\end{enumerate}
+		\footfullcite{texbook}
+	\end{frame}
+
+	\begin{frame}{References}
+		\printbibliography
+	\end{frame}
+
+\end{document}
