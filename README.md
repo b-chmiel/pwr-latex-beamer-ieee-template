@@ -10,6 +10,7 @@ LaTeX packages:
 - biblatex
 - beamer
 - biblatex-ieee
+- biber
 
 Those must be installed using `tlmgr install <packagename>` command
-in container or locally.
+in devcontainer or locally.
