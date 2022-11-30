@@ -1,3 +1,6 @@
+#Based on
+#https://towardsdatascience.com/three-ways-to-create-dockernized-latex-environment-2534163ee0c4
+
 version: "3.7"
 services:
   vscode:
