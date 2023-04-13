@@ -1,19 +1,15 @@
-#Based on
-#https://towardsdatascience.com/three-ways-to-create-dockernized-latex-environment-2534163ee0c4
-
-version: "3.7"
+version: "3.8"
 services:
-  vscode:
-    image: qmcgaw/latexdevcontainer
+  latex:
+    build: .
     volumes:
-      - ../:/workspace
+      - ../:/workspace:cached
       - ~/.ssh:/home/vscode/.ssh:ro
       - ~/.ssh:/root/.ssh:ro
-      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - TZ=
     cap_add:
       - SYS_PTRACE
     security_opt:
       - seccomp:unconfined
-    entrypoint: zsh -c "while sleep 1000; do :; done"
+    entrypoint: /bin/sh -c "while sleep 1000; do :; done"

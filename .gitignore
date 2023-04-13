@@ -1,1 +1,5 @@
 build/
+template.bcf
+template.pdf
+template.run.xml
+template.synctex.gz

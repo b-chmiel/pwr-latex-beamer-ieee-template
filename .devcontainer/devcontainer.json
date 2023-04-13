@@ -1,33 +1,30 @@
 {
-	"name": "latex-dev",
-	"dockerComposeFile": [
-		"docker-compose.yml"
-	],
-	"service": "vscode",
-	"runServices": [
-		"vscode"
-	],
-	"shutdownAction": "stopCompose",
+	"name": "LaTeX",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "latex",
 	"workspaceFolder": "/workspace",
-	"postCreateCommand": "",
-	"extensions": [
-		"james-yu.latex-workshop",
-		"vscodevim.vim"
-	],
-	"settings": {
-		"files.eol": "\n",
-		"latex-workshop.linting.chktex.enabled": true,
-		"latex-workshop.latex.clean.subfolder.enabled": true,
-		"latex-workshop.latex.autoClean.run": "onBuilt",
-		"editor.formatOnSave": true,
-		"files.associations": {
-			"*.tex": "latex"
-		},
-		"latex-workshop.latexindent.args": [
-			"-c",
-			"%DIR%/",
-			"%TMPFILE%",
-			"-y=\"defaultIndent: '%INDENT%',onlyOneBackUp: 1\""
-		]
-	}
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"james-yu.latex-workshop",
+				"vscodevim.vim"
+			],
+			"settings": {
+				"files.eol": "\n",
+				"latex-workshop.linting.chktex.enabled": true,
+				"latex-workshop.latex.clean.subfolder.enabled": true,
+				"latex-workshop.latex.autoClean.run": "onBuilt",
+				"editor.formatOnSave": true,
+				"files.associations": {
+					"*.tex": "latex"
+				},
+				"latex-workshop.latexindent.args": [
+					"-c",
+					"%DIR%/",
+					"%TMPFILE%",
+					"-y=\"defaultIndent: '%INDENT%',onlyOneBackUp: 1\""
+				]
+			}
+		}
+	},
 }
