@@ -1,0 +1,27 @@
+{
+	"editor.formatOnSave": false,
+	"latex-workshop.latex.outDir": "./build",
+	"latex-workshop.synctex.afterBuild.enabled": true,
+	"latex-workshop.view.pdf.viewer": "tab",
+	"latex-workshop.latex.clean.subfolder.enabled": false,
+	"latex-workshop.latex.autoClean.run": "onBuilt",
+	"latex-workshop.latex.tools": [
+		{
+			"name": "latexmk",
+			"command": "latexmk",
+			"args": [
+				"-shell-escape", // <---- added this line
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"-outdir=%OUTDIR%",
+				"%DOC%"
+			],
+			"env": {}
+		}
+	],
+	"editor.rulers": [
+		80
+	]
+}

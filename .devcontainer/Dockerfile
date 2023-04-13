@@ -47,6 +47,3 @@ RUN apt-get autoremove -y \
 ENV DEBIAN_FRONTEND=dialog \
     LANG=C.UTF-8 \
     LC_ALL=C.UTF-8
-
-RUN tlmgr init-usertree && \
-	tlmgr install biblatex
